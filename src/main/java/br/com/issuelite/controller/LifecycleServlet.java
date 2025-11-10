@@ -1,3 +1,5 @@
+package br.com.issuelite.controller;
+
 import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -28,7 +30,6 @@ public class LifecycleServlet extends HttpServlet {
         resp.setContentType("text/html");
         resp.getWriter().println("<html><body>");
         resp.getWriter().println("<h1>Servlet de Ciclo de Vida (v0.2)</h1>");
-        resp.getWriter().println("<p>Veja o CONSOLE do seu Tomcat. É lá que a mágica acontece.</p>");
         resp.getWriter().println("</body></html>");
     }
 
@@ -36,7 +37,6 @@ public class LifecycleServlet extends HttpServlet {
     public void destroy() {
         System.out.println("=====================================================");
         System.out.println(">>> LifecycleServlet: Método destroy() FOI CHAMADO!");
-        System.out.println(">>> O 'restaurante' fechou, limpando a bancada.");
         System.out.println("=====================================================");
     }
 }
